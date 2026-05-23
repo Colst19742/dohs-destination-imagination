@@ -132,7 +132,7 @@ nav{
 
         position: absolute;
         top: 0;
-        left: 100%;
+        left: calc(100% + 3px);
         
         padding: 0.5em 0em;
 
