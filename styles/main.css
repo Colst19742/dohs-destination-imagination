@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
     --black: #000;
     --gold: #fccc08;
     --blue: #813dd6;
     --orange: #f6782a;
-    /*--purple: #4c1db9;
-    --red: #dc4312;*/
+    --transition-duration: 1s;
+    --transition-timing-function: ease-in-out;
+    --transition-delay: 0s;
 
     --size: clamp(0.75em, 2.5vw, 1.3em);
 }
@@ -13,7 +16,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: "Times New Roman", serif;
+    font-family: "Roboto", sans-serif;
 }
 body{
     width: 100%;
@@ -35,10 +38,17 @@ header{
     background: linear-gradient(to right, var(--black) 75%, var(--gold));
     position: relative;
 
+    font-family: serif;
+
     color: var(--gold);
     font-size: var(--size);
     padding: 0.5em 3em;
     & .indent{ padding-left: 1em; }
+
+    & h1{
+        font-family: "Domine", "Times New Roman", serif;
+        font-weight: normal;
+    }
 
     & img{
         position: absolute;
@@ -76,10 +86,15 @@ nav{
             width: 100%;
             height: 100%;
             font-weight: bold;
+
+            transition: color var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
         }
         & li{
             border: var(--black) 3px solid;
             border-radius: 3em;
+
+            transition: border-color var(--transition-duration) var(--transition-timing-function) var(--transition-delay),
+                        background-color var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
         }
         & li:has(a.current){
             border-color: var(--gold);
@@ -202,10 +217,19 @@ main{
     & span.blue{
         font-weight: bold;
         color: var(--blue);
+
+        transition: color var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
+        &:hover{
+            color: var(--orange);
+        }
     }
     & span.orange{
         font-weight: bold;
         color: var(--orange);
+        transition: color var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
+        &:hover{
+            color: var(--blue);
+        }
     }
     
     & ul{
@@ -277,8 +301,16 @@ table{
         width: 100%;
         height: 100%;
     }
-    & .developer{
-        font-weight: bold;
+}
+.developer{
+    animation: embolden 1.5s ease-in-out 0s infinite alternate;
+}
+@keyframes embolden{
+    from{
+        font-weight: 400; /*normal*/
+    }
+    to{
+        font-weight: 700; /*bold*/
     }
 }
 
@@ -301,6 +333,8 @@ footer{
         font-weight: bold;
 
         font-size: calc(0.85 * var(--size));
+
+        transition: color var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
     }
     & a{
         display: block;
