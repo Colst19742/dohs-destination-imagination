@@ -334,7 +334,7 @@ footer{
 
         font-size: calc(0.85 * var(--size));
 
-        transition: color var(--transition-duration) var(--transition-timing-function) var(--transition-delay);
+        transition: color var(--transition-duration) ease-out var(--transition-delay);
     }
     & a{
         display: block;
@@ -473,4 +473,9 @@ footer{
             }
         }
     }
+}
+
+@media only screen and (prefers-reduced-motion: reduce){
+    :root{ --transition-duration: 0s; }
+    .developer{ animation: none; }
 }
