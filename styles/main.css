@@ -443,7 +443,7 @@ footer{
             & h2{
                 text-align: center;
             }
-            & ul{
+            & ul, ol{
                 padding: 1.5em;
                 list-style-type: square;
             }
@@ -469,7 +469,7 @@ footer{
             & h2{
                 text-align: center;
             }
-            & ul{
+            & ul, ol{
                 padding: 1.5em;
                 list-style-type: square;
             }
