@@ -212,6 +212,20 @@ main{
         padding-left: 1em;
     }
 
+    & a{
+        display: inline-block;
+        color: var(--blue);
+        text-decoration: underline;
+        font-style: normal;
+    }
+    & a:is(:focus, :hover){
+        text-decoration: none;
+    }
+    & a:active {
+        color: var(--orange);
+        font-style: italic;
+    }
+
     & aside{
         border: 3px solid var(--black);
         padding: 1em 0;
