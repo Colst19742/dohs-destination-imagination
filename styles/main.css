@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
     --black: #000;
@@ -38,16 +38,14 @@ header{
     background: linear-gradient(to right, var(--black) 75%, var(--gold));
     position: relative;
 
-    font-family: serif;
-
     color: var(--gold);
     font-size: var(--size);
     padding: 0.5em 3em;
     & .indent{ padding-left: 1em; }
 
     & h1{
-        font-family: "Domine", "Times New Roman", serif;
-        font-weight: normal;
+        font-family: "Montserrat", "Times New Roman", serif;
+        font-weight: bold;
     }
 
     & img{
